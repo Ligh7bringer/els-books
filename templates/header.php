@@ -4,8 +4,8 @@
 
     <head>
 
-        <link href="/css/bootstrap.css" rel="stylesheet"/>
-        <link href="/css/bootstrap-theme.css" rel="stylesheet"/>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
         <link href="css/style.css" rel="stylesheet"/>
 
         <?php if (isset($title)): ?>
@@ -45,6 +45,7 @@
              </div>
           </div>
         </div>
+
         <div class="col-md-2">
           <?php
             if (isset($_SESSION["loggedin"])) {
@@ -53,7 +54,7 @@
               Echo "<a href=login.php>Log in</a> or <a href=register.php>Register</a> ";
             }
           ?>
-          </div>
+        </div>
         
     </div>
 

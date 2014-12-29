@@ -19,7 +19,7 @@
 			}
 
 			if(query("INSERT INTO users (username, email, pass, paypal) VALUES(?, ?, ?, ?)", $_POST["username"], $_POST["email"], crypt($_POST["password"]), $pay) === false) {
-				apologize("Username is already taken.");
+				apologize("Username or e-email is already taken.");
 			} else {				
 				$rows = query("SELECT LAST_INSERT_ID() AS id");
 				$id = $rows[0]["id"];
