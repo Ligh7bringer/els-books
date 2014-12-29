@@ -38,10 +38,12 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="sell.php">Sell</a></li>
                 <li><a href="buy.php">Buy</a></li>
-              </ul>
-              <form class="navbar-form navbar-right">
-                <input type="text" class="form-control col-lg-8" placeholder="Search">
-              </form>
+             </ul>
+
+             <ul class="nav navbar-nav navbar-right">
+                <li><a href="profile.php">Profile</a></li>
+             </ul>
+
              </div>
           </div>
         </div>
