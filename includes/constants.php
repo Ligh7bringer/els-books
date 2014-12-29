@@ -10,7 +10,7 @@
      */
 
     // your database's name
-    define("DATABASE", "dev");
+    define("DATABASE", "els-books");
 
     // your database's password
     define("PASSWORD", "985kus9h");
