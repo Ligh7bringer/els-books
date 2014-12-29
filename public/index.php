@@ -1,5 +1,4 @@
 <?php
-    require("../includes/config.php");
-
-    render("index.php", ["title" => "Home"]);
+	require("../includes/config.php");
+	render("../templates/home.php", ["title" => "Home"]);
 ?>

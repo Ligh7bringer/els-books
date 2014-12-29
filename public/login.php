@@ -2,9 +2,9 @@
     // configuration
     require("../includes/config.php"); 
     // if form was submitted
-    if (isset($_SESSION["loggedin"])) {
-        redirect("index.php");
-    }
+
+    //doesn't allow acces to login/register page if user's logged in; initialised in functions.php
+    loggedin();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {

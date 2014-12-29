@@ -16,7 +16,7 @@
      */
     function apologize($message)
     {
-        render("apology.php", ["message" => $message]);
+        render("apology.php", ["message" => $message, "title" => "Sorry"]);
         exit;
     }
 
@@ -235,4 +235,14 @@
 			}
     }
 
+    function loggedin() {
+        if (isset($_SESSION["loggedin"])) {
+            redirect("index.php");
+        }
+    }
+
+    function success($message){
+        render("success.php", ["message" => $message, "title" => "All done."]);
+        exit;
+    }
 ?>

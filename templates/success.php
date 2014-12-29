@@ -1,13 +1,13 @@
 <div class="container">
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
-		<p class="lead text-danger">
-		    Sorry!
+		<p class="lead text-success">
+		    Success!
 		</p>
-		<p class="text-danger">
+		<p class="text-success">
 		    <?= htmlspecialchars($message) ?>
 		</p>
 
-		<a href="javascript:history.go(-1);">Back</a>
+		<a href="index.php">Home</a>
 	</div>
 </div>
