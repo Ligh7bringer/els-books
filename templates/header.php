@@ -41,6 +41,7 @@
                 <li><a href="sell.php">Sell</a></li>
                 <li><a href="buy.php">Buy</a></li>
                 <li><a href="sendpm.php">PM</a></li>
+                <li><a href="search.php">Search</a></li>
              </ul>
 
              <ul class="nav navbar-nav navbar-right">
@@ -54,10 +55,8 @@
 
         <div class="col-md-2">
           <?php
-            $result = query("SELECT * FROM pms WHERE touser = ?", $_SESSION["username"]);
-            //dump(count($result));
-
             if (isset($_SESSION["loggedin"])) {
+                $result = query("SELECT * FROM pms WHERE `touser` = ? AND `read` = ?", $_SESSION["username"], 0);
                 echo "<p class=text-primary> Welcome, ".$_SESSION["username"].".</p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=logout.php>Log out </a>)";
             } else {
               Echo "<a href=login.php>Log in</a> or <a href=register.php>Register</a> ";

@@ -22,10 +22,10 @@
 		Grade:
 		<select name="grade">
 			<option>--Choose Grade--</option>
-		   <option>9th</option>
-		   <option>10th</option>
-		   <option>11th</option>
-		   <option>12th</option>
+		   <option>9</option>
+		   <option>10</option>
+		   <option>11</option>
+		   <option>12</option>
 		</select>
 		</div>
 	</div>
