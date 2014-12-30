@@ -23,4 +23,33 @@
 	
 	</div>
 </div>
+<br>
+<br>
+<div class="row">
+<div class="text-center">
+<h3>Books You're Selling</h3>
+</div>
+<br>
+<table width='100%' class="table table-striped">
+				<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th><th>Delete</th></tr>
+
+	<?php
+		$results = query("SELECT * FROM books WHERE id = ?", $_SESSION["id"]);
+		if($results != NULL) {
+							foreach($results as $result) {
+								$price = number_format($result["price"], 2);
+								print("<tr>");
+								print("<td>{$result["subject"]}</td>");
+								print("<td>{$result["publ"]}</td>");
+								print("<td>{$result["grade"]}</td>");
+								print("<td>{$price}</td>");
+								print("<td>{$result["cond"]}</td>");
+								print("<td>"."<a href='bookinfo.php?id=$result[book_id]'>" . "See More" ."</a>" ."</td>");
+								print("<td>"."<a href='delete.php?id=$result[book_id]'>" . "Delete" ."</a>" ."</td>");
+								print("</tr>");
+								} 
+							}
+	?>
+</table>
+</div>
 </div>

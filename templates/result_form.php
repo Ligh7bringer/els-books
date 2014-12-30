@@ -6,7 +6,12 @@
 				<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th></tr>
 
 				<?php
-				$results = $_SESSION['result'];
+				if (isset($_SESSION['grade'])) {
+					$results = query("SELECT * FROM books WHERE grade = ?", $_SESSION['grade']);
+					$_SESSION['grade'] = NULL;					
+				} else {
+					$results = $_SESSION['result'];
+				}
 					if($results != NULL) {
 						foreach($results as $result) {
 							$price = number_format($result["price"], 2);

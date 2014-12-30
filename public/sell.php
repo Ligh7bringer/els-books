@@ -14,7 +14,7 @@
     			$name = "none";
 			}
 
-			query("INSERT INTO books (id, subject, grade, publ, cond, price, picid) VALUES(?, ?, ?, ?, ?, ?, ?)", $_SESSION["id"], $_POST["subject"], $_POST["grade"], $_POST["publisher"], $_POST["condition"], $_POST["price"], $name);
+			query("INSERT INTO books (id, subject, grade, publ, cond, price, picid) VALUES(?, ?, ?, ?, ?, ?, ?)", $_SESSION["id"], strtolower($_POST["subject"]), $_POST["grade"], strtolower($_POST["publisher"]), $_POST["condition"], $_POST["price"], $name);
 
 			success("Book sucessfully uploaded.");
 
