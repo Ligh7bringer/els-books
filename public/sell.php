@@ -2,6 +2,10 @@
     require("../includes/config.php");
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (!is_numeric($_POST["price"]))
+      {
+        apologize("Enter valid price");
+      }
     	if ($_POST["subject"] == NULL || $_POST["publisher"] == NULL || $_POST["price"] == NULL || $_POST["grade"] == "--Choose Grade--"|| $_POST["condition"] == "--Choose Condition--") {
     		apologize("Please, don't leave any fields empty.");
     	} else {

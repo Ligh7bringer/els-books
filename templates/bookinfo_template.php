@@ -24,7 +24,16 @@
 				<p><strong>Publisher:</strong> <span class="text-primary"><?php print($result[0]["publ"]); ?> </span></p>
 				<p><strong>Grade:</strong> <span class="text-primary"><?php print($result[0]["grade"]); ?> </span></p>
 				<p><strong>Condition:</strong> <span class="text-primary"><?php print($result[0]["cond"]); ?> </span></p>
-				<p><strong>Price:</strong> <span class="text-primary"><?php print(number_format($result[0]["price"], 2)); ?> </span></p>	
+				<p><strong>Price:</strong> <span class="text-primary"><?php print(number_format($result[0]["price"], 2)); ?> </span></p>
+				<br>
+				<form action="buy.php" method="post">
+					<div class="form-group">
+					<?php
+						$seller = $result[0]["id"];
+						print("<a href='buy.php?id=$id&sell=$seller'>Buy</a>");
+					?>
+                	</div>
+				</form>	
 		</div>
 	</div>
 </div>
