@@ -23,7 +23,9 @@
 
     <body>
     <div class="container">
-          <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-2"></div>
+          <div class="col-md-8">
               <div class="navbar navbar-default">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
@@ -38,6 +40,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="sell.php">Sell</a></li>
                 <li><a href="buy.php">Buy</a></li>
+                <li><a href="sendpm.php">PM</a></li>
              </ul>
 
              <ul class="nav navbar-nav navbar-right">
@@ -45,19 +48,23 @@
              </ul>
 
              </div>
+
           </div>
         </div>
 
         <div class="col-md-2">
           <?php
+            $result = query("SELECT * FROM pms WHERE touser = ?", $_SESSION["username"]);
+            //dump(count($result));
+
             if (isset($_SESSION["loggedin"])) {
-                echo "<p class=text-primary> Welcome, ".$_SESSION["username"].".</p> (<a href=logout.php>Log out </a>)";
+                echo "<p class=text-primary> Welcome, ".$_SESSION["username"].".</p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=logout.php>Log out </a>)";
             } else {
               Echo "<a href=login.php>Log in</a> or <a href=register.php>Register</a> ";
             }
           ?>
         </div>
-        
+      </div>
     </div>
 
 

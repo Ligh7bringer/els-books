@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="row">
     <div class="col-md-4">   
     </div>
     <div class="col-md-4">
@@ -27,5 +28,6 @@
         <div>
             or <a href="login.php">login</a>
         </div>
+    </div>
     </div>
 </div>

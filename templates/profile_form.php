@@ -1,4 +1,5 @@
 <div class="container">
+<div class="row">
 	<div class="col-md-5 col-md-offset-2">
 		<h3> Change Password </h3>
 		<form action="profile.php" method="post">
@@ -21,5 +22,5 @@
 		<p><strong>Selling </strong><span class="text-primary"><?php print($num_rows); ?> </span> books. </p>
 	
 	</div>
-
+</div>
 </div>

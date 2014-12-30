@@ -27,7 +27,7 @@
 	if($positions[0]["paypal"] == true) {
 		$paypal = "<span class=text-success>yes</span>";
 	} else {
-		$paypal = "<span class=text-warning>no</span>";
+		$paypal = "<span class=text-danger>no</span>";
 	}
 
 	render("profile_form.php", ["title" => "Profile", "positions" => $positions, "paypal" => $paypal, "num_rows" => $num_rows]);

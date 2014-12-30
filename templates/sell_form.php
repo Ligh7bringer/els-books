@@ -1,4 +1,5 @@
 <div class="container">
+<div class="row">
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
 		<h3>Submit a new book</h3>
@@ -43,5 +44,6 @@
                 </div>
             </fieldset>
         </form>
+	</div>
 	</div>
 </div>
