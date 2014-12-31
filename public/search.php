@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	if (empty($_POST["subject"]) && empty($_POST["publisher"]) && $_POST["grade"] == "--Choose Grade--")
 	{
-		apologize("Enter ...");
+		apologize("Enter something to search.");
 	}
 	else if (empty($_POST["publisher"]) && $_POST["subject"] !== NULL && $_POST["grade"] == "--Choose Grade--")
 	{

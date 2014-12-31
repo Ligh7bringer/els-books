@@ -7,7 +7,7 @@
     		<form action="sendpm.php" method="post">
                 <fieldset>
                     <div class="form-group">
-                        <input autofocus class="form-control" name="to" placeholder="To:" type="text"/>
+                        <input autofocus class="form-control" name="to" placeholder="To:" type="text" value="<?php print($to); ?>"/>
                     </div>
                     <div class="form-group">
                         <input autofocus class="form-control" name="subject" placeholder="Subject:" type="text"/>

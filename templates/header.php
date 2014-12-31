@@ -8,6 +8,8 @@
         <link href="css/bootstrap-theme.css" rel="stylesheet"/>
         <link href="css/style.css" rel="stylesheet"/>
 
+        <link rel="shortcut icon" type="image/png" href="../public/img/favicon.png" />
+
         <?php if (isset($title)): ?>
             <title><?= htmlspecialchars($title) ?></title>
         <?php else: ?>
@@ -33,7 +35,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">ELS Bookstore</a>
+              <a class="navbar-brand" rel="home" title="Bookstore"> <img style="max-width:150px; max-height:150px;"
+             src="../public/img/logo.png"> </a>
             </div>
             <div class="navbar-collapse collapse navbar-inverse-collapse">
               <ul class="nav navbar-nav">
@@ -56,7 +59,7 @@
           <?php
             if (isset($_SESSION["loggedin"])) {
                 $result = query("SELECT * FROM pms WHERE `touser` = ? AND `read` = ?", $_SESSION["username"], 0);
-                echo "<p class=text-primary> Welcome, ".$_SESSION["username"].".</p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=outbox.php>Outbox</a>) (<a href=logout.php>Log out </a>) ";
+                echo "<p>Welcome, ".$_SESSION["username"].".</p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=outbox.php>Outbox</a>) (<a href=logout.php>Log out </a>) ";
             } else {
               Echo "<a href=login.php>Log in</a> or <a href=register.php>Register</a> ";
             }

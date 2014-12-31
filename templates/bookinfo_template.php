@@ -6,6 +6,7 @@
 			<h3> Picture </h3>
 			<?php
 				$result = query("SELECT * FROM books WHERE book_id = ?", $id);
+				$sellname = query("SELECT * FROM users WHERE id = ?", $result[0]["id"]);
 
 				if($result[0]["picid"] != "none") {
 					$path = $result[0]["picid"];
@@ -20,6 +21,7 @@
 		</div>
 		<div class="col-md-5">
 			<h3> Book Info </h3>
+				<p><strong>Seller: </strong><span class="text-primary"> <?php print($sellname[0]["username"]); ?> </span> </p>
 				<p><strong>Subject: </strong><span class="text-primary"> <?php print($result[0]["subject"]); ?> </span> </p>
 				<p><strong>Publisher:</strong> <span class="text-primary"><?php print($result[0]["publ"]); ?> </span></p>
 				<p><strong>Grade:</strong> <span class="text-primary"><?php print($result[0]["grade"]); ?> </span></p>
@@ -30,7 +32,14 @@
 					<div class="form-group">
 					<?php
 						$seller = $result[0]["id"];
-						print("<a href='buy.php?id=$id&sell=$seller'>Buy</a>");
+						$bookid = $result[0]["book_id"];
+						if ($sellname[0]["username"] == $_SESSION['username'])
+						{
+							print("<a href='confirm.php?bookid=$bookid'>Confirm</a>");
+						}
+						else {
+						print("<a href='buy.php?id=$id&sell=$seller&bookid=$bookid'>Buy</a>");
+						}
 					?>
                 	</div>
 				</form>	

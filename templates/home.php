@@ -10,7 +10,7 @@
 			<a href="result.php?grade=10" style="background-color: #EE0000" name="10">
 			<div class="row-hover">
 				<div class="col-12 text-center">
-				<h2 style="color: #FFFFFF">Books for Sophmore</h2> 
+				<h2 style="color: #FFFFFF">Books for Sophomore</h2> 
 				</div>
 			</div>
 			</a>
@@ -35,17 +35,9 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-				<h3>Something</h3>
-				<a href="/">Something</a>
-			</div>
-						<div class="col-md-4">
-				<h3>Something</h3>
-				<a href="/">Something</a>
-			</div>
-						<div class="col-md-4">
-				<h3>Something</h3>
-				<a href="/">Something</a>
+			<div class="col-md-offset-4 col-md-4 text-center">
+				<h4>Visit the school's main webpage</h4>
+				<a href="http://www.eg-plovdiv.com/">www.eg-plovdiv.com</a>
 			</div>
 		</div>
 	</div>
