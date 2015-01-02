@@ -1,5 +1,3 @@
 els-books
-=========
-cs50x final project.
-WIP
-
+cs50x final project. 
+Done for now.
