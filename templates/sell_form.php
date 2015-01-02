@@ -10,7 +10,7 @@
                     <input autofocus class="form-control" name="subject" placeholder="Subject" type="text"/>
                 </div>
                  <div class="form-group"> 
-                 <p class="text-primary"> Grade: </p>                   
+                 <p > Grade: </p>                   
 					<select name="grade">
 						<option>--Choose Grade--</option>
 						<option>9</option>
@@ -23,7 +23,7 @@
                     <input class="form-control" name="publisher" placeholder="Publisher" type="text"/>
                 </div>
                 <div class="form-group">
-                	<p class="text-primary"> Condition: </p>                   
+                	<p > Condition: </p>                   
 					<select name="condition">
 						<option>--Choose Condition--</option>
 						<option>Bad</option>
@@ -35,7 +35,7 @@
                     <input class="form-control" name="price" placeholder="Price" type="text"/>
                 </div>
                 <div>
-				    <p class="text-primary"> Upload an image (optional): </p>
+				    <p> Upload an image (optional): </p>
 				    <input name="userfile" type="file" />
 				</div>
 				<br>

@@ -8,6 +8,7 @@
 		    <?= htmlspecialchars($message) ?>
 		</p>
 
+		<a href="profile.php">Profile  </a>
 		<a href="index.php">Home</a>
 	</div>
 </div>

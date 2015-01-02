@@ -16,10 +16,10 @@
 	<div class="col-md-5">
 
 		<h3> User Info </h3>
-		<p><strong>Username: </strong><span class="text-primary"> <?php print($positions[0]["username"]); ?></span> </p>
-		<p><strong>E-mail:</strong> <span class="text-primary"><?php print($positions[0]["email"]); ?> </span></p>
-		<p><strong>PayPal Account: </strong><span class="text-primary"><?php print($paypal); ?></span> </p>
-		<p><strong>Selling </strong><span class="text-primary"><?php print($num_rows); ?> </span> books. </p>
+		<p><strong>Username: </strong><span class="text-danger"> <?php print($positions[0]["username"]); ?></span> </p>
+		<p><strong>E-mail:</strong> <span class="text-danger"><?php print($positions[0]["email"]); ?> </span></p>
+		<p><strong>PayPal Account: </strong><span class="text-danger"><?php print($paypal); ?></span> </p>
+		<p><strong>Selling </strong><span class="text-danger"><?php print($num_rows); ?> </span> books. </p>
 	
 	</div>
 </div>
@@ -31,11 +31,12 @@
 </div>
 <br>
 <table width='100%' class="table table-striped">
-				<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th><th>Delete</th></tr>
-
+				
 	<?php
 		$results = query("SELECT * FROM books WHERE id = ?", $_SESSION["id"]);
 		if($results != NULL) {
+				print("<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th><th>Delete</th></tr>");
+
 							foreach($results as $result) {
 								$price = number_format($result["price"], 2);
 								print("<tr>");

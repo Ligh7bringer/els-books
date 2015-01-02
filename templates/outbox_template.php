@@ -3,7 +3,7 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-10">
 			<table width='100%' class="table table-striped">
-				<tr><th>To:</th><th>Subject</th><th>Date</th></tr>
+				<tr><th>To</th><th>Subject</th><th>Date</th></tr>
 
 				<?php
 					if($sql != NULL) {

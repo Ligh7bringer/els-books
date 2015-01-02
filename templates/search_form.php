@@ -6,6 +6,7 @@
 	</div>
 	<br>
 	<form action="search.php" method="post">
+	<fieldset>
 	<div class="row">
 		<div class="col-lg-offset-4 col-lg-4">
 		<input type="text" name="subject" placeholder="Subject"/>
@@ -17,9 +18,10 @@
 		</div>
 	</div>
 	<br>	
+
 	<div class="row">
 		<div class="col-lg-offset-4 col-lg-4">
-		Grade:
+		<p> Grade: </p>
 		<select name="grade">
 			<option>--Choose Grade--</option>
 		   <option>9</option>
@@ -34,6 +36,7 @@
 		<div class="col-lg-offset-4 col-lg-4">
             <button type="submit" class="btn">Search</button>
         </div>
+      </fieldset>
     </form>
 	</div>	
 </div>

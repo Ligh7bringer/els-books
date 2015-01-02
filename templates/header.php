@@ -23,7 +23,7 @@
 
     </head>
 
-    <body>
+    <body style="background-image:url(../public/img/background.png); background-repeat:repeat">
     <div class="container">
       <div class="row">
         <div class="col-md-2"></div>
@@ -41,8 +41,8 @@
             <div class="navbar-collapse collapse navbar-inverse-collapse">
               <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="sell.php">Sell</a></li>
-                <li><a href="sendpm.php">PM</a></li>
+                <li><a href="sell.php">Upload</a></li>
+                <li><a href="sendpm.php">Message</a></li>
                 <li><a href="search.php">Search</a></li>
              </ul>
 
@@ -59,7 +59,7 @@
           <?php
             if (isset($_SESSION["loggedin"])) {
                 $result = query("SELECT * FROM pms WHERE `touser` = ? AND `read` = ?", $_SESSION["username"], 0);
-                echo "<p>Welcome, ".$_SESSION["username"].".</p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=outbox.php>Outbox</a>) (<a href=logout.php>Log out </a>) ";
+                echo "<p>Welcome, ".$_SESSION["username"]."! </p>(<a href=inbox.php>Inbox</a> ". count($result).") (<a href=outbox.php>Outbox</a>) (<a href=logout.php>Log out </a>) ";
             } else {
               Echo "<a href=login.php>Log in</a> or <a href=register.php>Register</a> ";
             }

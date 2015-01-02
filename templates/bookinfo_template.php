@@ -21,12 +21,12 @@
 		</div>
 		<div class="col-md-5">
 			<h3> Book Info </h3>
-				<p><strong>Seller: </strong><span class="text-primary"> <?php print($sellname[0]["username"]); ?> </span> </p>
-				<p><strong>Subject: </strong><span class="text-primary"> <?php print($result[0]["subject"]); ?> </span> </p>
-				<p><strong>Publisher:</strong> <span class="text-primary"><?php print($result[0]["publ"]); ?> </span></p>
-				<p><strong>Grade:</strong> <span class="text-primary"><?php print($result[0]["grade"]); ?> </span></p>
-				<p><strong>Condition:</strong> <span class="text-primary"><?php print($result[0]["cond"]); ?> </span></p>
-				<p><strong>Price:</strong> <span class="text-primary"><?php print(number_format($result[0]["price"], 2)); ?> </span></p>
+				<p><strong>Seller: </strong><span class="text-danger"> <?php print($sellname[0]["username"]); ?> </span> </p>
+				<p><strong>Subject: </strong><span class="text-danger"> <?php print($result[0]["subject"]); ?> </span> </p>
+				<p><strong>Publisher:</strong> <span class="text-danger"><?php print($result[0]["publ"]); ?> </span></p>
+				<p><strong>Grade:</strong> <span class="text-danger"><?php print($result[0]["grade"]); ?> </span></p>
+				<p><strong>Condition:</strong> <span class="text-danger"><?php print($result[0]["cond"]); ?> </span></p>
+				<p><strong>Price:</strong> <span class="text-danger"><?php print(number_format($result[0]["price"], 2)); ?> </span></p>
 				<br>
 				<form action="buy.php" method="post">
 					<div class="form-group">
@@ -35,7 +35,7 @@
 						$bookid = $result[0]["book_id"];
 						if ($sellname[0]["username"] == $_SESSION['username'])
 						{
-							print("<a href='confirm.php?bookid=$bookid'>Confirm</a>");
+							print("If you have received a buy request, <a href='confirm.php?bookid=$bookid'>sell</a> your book.");
 						}
 						else {
 						print("<a href='buy.php?id=$id&sell=$seller&bookid=$bookid'>Buy</a>");

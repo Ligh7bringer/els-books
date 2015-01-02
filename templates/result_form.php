@@ -3,7 +3,7 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-9">
 			<table width='100%' class="table table-striped">
-				<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th></tr>
+				
 
 				<?php
 				if (isset($_SESSION['grade'])) {
@@ -13,6 +13,7 @@
 					$results = $_SESSION['result'];
 				}
 					if($results != NULL) {
+						print("<tr><th>Subject</th><th>Publisher</th><th>Grade</th><th>Price</th><th>Condition</th><th>See More</th></tr>");
 						foreach($results as $result) {
 							$price = number_format($result["price"], 2);
 							print("<tr>");
