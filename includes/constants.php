@@ -13,7 +13,7 @@
     define("DATABASE", "els-books");
 
     // your database's password
-    define("PASSWORD", "985kus9h");
+    define("PASSWORD", "asd123");
 
     // your database's server
     define("SERVER", "localhost");
